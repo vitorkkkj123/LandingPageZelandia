@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zelândia Santos | Coordenação de Eventos & Garçons em SAJ</title>
+    
+    <!-- Meta Tags para Prévia no WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Zelândia Santos | Coordenação de Eventos & Garçons">
+    <meta property="og:description" content="Garçons experientes, pontuais e uniformizados para casamentos, formaturas, aniversários e eventos corporativos em Santo Antônio de Jesus e região.">
+    <meta property="og:image" content="assets/img/sobre-zelandia.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cor-preto-profundo: #09090b; /* Preto Ônix */
+            --cor-grafite-escuro: #18181b; /* Chumbo Escuro */
+            --cor-dourado: #d4af37;        /* Ouro Champagne Metálico */
+            --cor-dourado-suave: #fef9c3;  /* Fundo sutil dourado */
+            --cor-whatsapp: #25d366;
+            --cor-texto-escuro: #18181b;
+            --cor-texto-suave: #52525b;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--cor-texto-escuro);
+            background-color: #fafafa;
+        }
+
+        /* Navbar & Logo */
+        .navbar {
+            background-color: var(--cor-preto-profundo) !important;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+        }
+        .navbar-brand img {
+            height: 48px;
+            width: auto;
+            filter: brightness(0) invert(1);
+            transition: transform 0.2s ease;
+        }
+        .navbar-brand img:hover {
+            transform: scale(1.03);
+        }
+        .nav-link {
+            color: #f4f4f5 !important;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        .nav-link:hover {
+            color: var(--cor-dourado) !important;
+        }
+
+        /* Seção Hero */
+        .hero-section {
+            background: linear-gradient(135deg, var(--cor-preto-profundo) 0%, var(--cor-grafite-escuro) 100%);
+            color: #ffffff;
+            padding: 85px 0 70px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .text-gold {
+            color: var(--cor-dourado) !important;
+        }
+        .badge-city {
+            background-color: rgba(212, 175, 55, 0.12);
+            color: #fef08a;
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            border-radius: 30px;
+            padding: 6px 16px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 22px;
+        }
+
+        /* Molduras das Fotos */
+        .img-hero-frame {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            display: inline-block;
+            max-width: 390px;
+            width: 100%;
+        }
+        .img-hero-frame img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            object-position: top center;
+            border-radius: 16px;
+            display: block;
+        }
+
+        .img-sobre-frame {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 22px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e4e4e7;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .img-sobre-frame img {
+            width: 100%;
+            height: 460px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 14px;
+            display: block;
+        }
+
+        /* Botão WhatsApp */
+        .btn-whatsapp {
+            background-color: var(--cor-whatsapp);
+            color: #ffffff;
+            font-weight: 700;
+            border-radius: 50px;
+            padding: 14px 28px;
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-whatsapp:hover {
+            background-color: #1eb954;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(37, 211, 102, 0.38);
+        }
+
+        /* Cards de Serviços */
+        .card-evento {
+            border: 1px solid #e4e4e7;
+            border-radius: 16px;
+            background: #ffffff;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+        .card-evento:hover {
+            transform: translateY(-6px);
+            border-color: var(--cor-dourado);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.07) !important;
+        }
+        .icon-box {
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            background-color: var(--cor-dourado-suave);
+            color: var(--cor-dourado);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 16px;
+        }
+
+        .feature-icon {
+            color: var(--cor-dourado);
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+
+        .stat-card {
+            background: #ffffff;
+            border: 1px solid #e4e4e7;
+            border-radius: 14px;
+            padding: 20px;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--cor-dourado);
+        }
+
+        /* FAQ */
+        .accordion-button:not(.collapsed) {
+            color: var(--cor-dourado);
+            background-color: #fffdf5;
+            box-shadow: none;
+        }
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: rgba(0,0,0,.125);
+        }
+
+        /* Botão Flutuante */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            background-color: var(--cor-whatsapp);
+            color: #ffffff;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.25s ease, background-color 0.25s ease;
+        }
+        .whatsapp-float:hover {
+            background-color: #1eb954;
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-2">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#inicio">
+                <img src="assets/img/logo.png" alt="Zelândia Coordenadora de Eventos">
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+                <ul class="navbar-nav align-items-lg-center gap-lg-3 my-3 my-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#eventos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#diferenciais">Diferenciais</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Quem Sou</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">Dúvidas</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <a href="https://wa.me/5575982612616?text=Ol%C3%A1%2C%20Dona%20Zel%C3%A2ndia!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20meu%20evento." 
+                           target="_blank" 
+                           class="btn btn-sm btn-outline-warning fw-bold px-3 py-2 rounded-pill text-white" 
+                           style="border-color: var(--cor-dourado);">
+                            <i class="bi bi-whatsapp me-1 text-success"></i> Pedir Orçamento
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Hero (Início) -->
+    <section id="inicio" class="hero-section text-center text-lg-start">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <span class="badge-city">
+                        <i class="bi bi-geo-alt-fill text-gold me-1"></i> Santo Antônio de Jesus - BA e Região
+                    </span>
+                    <h1 class="display-5 fw-extrabold mb-3 lh-sm">
+                        Garçons experientes e atenciosos para o seu evento ser <span class="text-gold">impecável</span>.
+                    </h1>
+                    <p class="lead mb-4 fs-5" style="color: #d4d4d8;">
+                        Coordenação completa de equipes com pontualidade, postura elegante e atendimento ágil para que você aproveite sua festa sem preocupações.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                        <a href="https://wa.me/5575982612616?text=Ol%C3%A1%2C%20Dona%20Zel%C3%A2ndia!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20uma%20equipe%20de%20gar%C3%A7ons." 
+                           target="_blank" 
+                           class="btn-whatsapp shadow">
+                            <i class="bi bi-whatsapp fs-5"></i> Solicitar Orçamento no WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <div class="img-hero-frame">
+                        <img src="assets/img/sobre-zelandia.jpg" alt="Zelândia Santos em Santo Antônio de Jesus">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Tipos de Eventos -->
+    <section id="eventos" class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+                <span class="text-gold fw-bold text-uppercase fs-6">Serviços Especializados</span>
+                <h2 class="fw-bold mt-2 text-dark">Atendimento sob medida para qualquer ocasião</h2>
+                <p class="text-muted">Equipes dimensionadas de acordo com a proposta e porte da sua celebração.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-evento h-100 p-4 shadow-sm">
+                        <div class="icon-box"><i class="bi bi-gem"></i></div>
+                        <h5 class="fw-bold mb-2">Casamentos e Noivados</h5>
+                        <p class="text-muted small mb-0">Serviço de alta etiqueta, atenção especial aos noivos, padrinhos e reposição constante das mesas.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-evento h-100 p-4 shadow-sm">
+                        <div class="icon-box"><i class="bi bi-mortarboard-fill"></i></div>
+                        <h5 class="fw-bold mb-2">15 Anos e Formaturas</h5>
+                        <p class="text-muted small mb-0">Dinamismo para atender pista de dança, mesas de família e fluxo contínuo de bebidas e coquetéis.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-evento h-100 p-4 shadow-sm">
+                        <div class="icon-box"><i class="bi bi-cake2-fill"></i></div>
+                        <h5 class="fw-bold mb-2">Aniversários em Geral</h5>
+                        <p class="text-muted small mb-0">De comemorações íntimas a grandes recepções sociais e celebrações em família.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-evento h-100 p-4 shadow-sm">
+                        <div class="icon-box"><i class="bi bi-balloon-fill"></i></div>
+                        <h5 class="fw-bold mb-2">Aniversários Infantis</h5>
+                        <p class="text-muted small mb-0">Paciência, atenção aos pequenos e agilidade no serviço volante de salgados, doces e sucos.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-evento h-100 p-4 shadow-sm">
+                        <div class="icon-box"><i class="bi bi-cup-hot-fill"></i></div>
+                        <h5 class="fw-bold mb-2">Coffee Breaks & Empresas</h5>
+                        <p class="text-muted small mb-0">Postura formal e discreta para reuniões corporativas, congressos, palestras e recepções empresariais.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-evento h-100 p-4 shadow-sm">
+                        <div class="icon-box"><i class="bi bi-people-fill"></i></div>
+                        <h5 class="fw-bold mb-2">Confraternizações & Almoços</h5>
+                        <p class="text-muted small mb-0">Atendimento organizado e eficiente para churrascos em chácaras e confraternizações de fim de ano.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Diferenciais -->
+    <section id="diferenciais" class="py-5 bg-light border-top border-bottom">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <span class="text-gold fw-bold text-uppercase fs-6">Por que contratar</span>
+                    <h2 class="fw-bold mt-2 mb-4">Você aproveita a festa como convidado, nossa equipe cuida de tudo.</h2>
+                    
+                    <div class="d-flex flex-column gap-4">
+                        <div class="d-flex align-items-start gap-3">
+                            <i class="bi bi-check-circle-fill feature-icon"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Pontualidade e Chegada com Antecedência</h6>
+                                <p class="text-muted small mb-0">Chegamos antes do horário marcado para organizar a copa/apoio, entender a rotina da cozinha e alinhar o serviço com o buffet.</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start gap-3">
+                            <i class="bi bi-check-circle-fill feature-icon"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Uniforme Social e Apresentação Alinhada</h6>
+                                <p class="text-muted small mb-0">Profissionais devidamente padronizados, com uniforme preto impecável, postura discreta e elegância no salão.</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start gap-3">
+                            <i class="bi bi-check-circle-fill feature-icon"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Educação e Atenção Contínua</h6>
+                                <p class="text-muted small mb-0">Garçons prestativos que acolhem cada convidado com simpatia e mantêm pratos e copos sempre abastecidos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="p-4 p-md-5 rounded-4 border text-center shadow-lg" style="background-color: var(--cor-preto-profundo); color: #ffffff; border-color: rgba(212, 175, 55, 0.3) !important;">
+                        <i class="bi bi-shield-check display-3 text-gold mb-3 d-block"></i>
+                        <h4 class="fw-bold mb-2 text-white">Sem imprevistos ou faltas</h4>
+                        <p class="small mb-4 text-light" style="opacity: 0.85;">
+                            Supervisão diretamente comigo Zelândia, para assegurar a escala completa de garçons no local, sem dor de cabeça de última hora para o anfitrião.
+                        </p>
+                        <a href="https://wa.me/5575982612616?text=Ol%C3%A1%2C%20Dona%20Zel%C3%A2ndia!%20Quero%20consultar%20a%20disponibilidade%20para%20minha%20data." 
+                           target="_blank" 
+                           class="btn btn-outline-warning fw-bold rounded-pill px-4 text-white"
+                           style="border-color: var(--cor-dourado);">
+                            Consultar Minha Data
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre / Autoridade de Dona Zelândia -->
+    <section id="sobre" class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 order-lg-1 order-2">
+                    <div class="img-sobre-frame">
+                        <img src="assets/img/hero-zelandia.jpg" alt="Zelândia Pereira Coordenadora em Evento de Alto Padrão">
+                    </div>
+                </div>
+
+                <div class="col-lg-7 order-lg-2 order-1">
+                    <span class="text-gold fw-bold text-uppercase fs-6">Experiência e Credibilidade</span>
+                    <h2 class="fw-bold mt-2 mb-3">Quem coordena o seu atendimento</h2>
+                    
+                    <p class="text-secondary mb-3">
+                        Meu nome é <strong>Zelândia Pereira dos Santos</strong>. Atuo há anos na coordenação de equipes de garçons para festas e eventos em <strong>Santo Antônio de Jesus e todo o Recôncavo Baiano</strong>, com parcerias firmes e consolidadas junto aos principais buffets da região.
+                    </p>
+                    <p class="text-secondary mb-4">
+                        O sucesso de uma recepção depende da harmonia entre a cozinha e o salão. Ao contratar minha equipe, você garante um atendimento atencioso, rápido e organizado, para que seus amigos e familiares levem a melhor lembrança da sua comemoração.
+                    </p>
+
+                    <div class="row g-3">
+                        <div class="col-sm-4">
+                            <div class="stat-card">
+                                <div class="stat-number">100%</div>
+                                <div class="small text-muted fw-semibold">Compromisso e Pontualidade</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="stat-card">
+                                <div class="stat-number">+2</div>
+                                <div class="small text-muted fw-semibold">Buffets Parceiros Fixos</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="stat-card">
+                                <div class="stat-number">SAJ</div>
+                                <div class="small text-muted fw-semibold">& Região Atendida</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Dúvidas Frequentes (FAQ) -->
+    <section id="faq" class="py-5 bg-light border-top">
+        <div class="container py-4">
+            <div class="text-center mx-auto mb-5" style="max-width: 650px;">
+                <span class="text-gold fw-bold text-uppercase fs-6">Tire suas Dúvidas</span>
+                <h2 class="fw-bold mt-2">Perguntas Frequentes</h2>
+                <p class="text-muted">Respostas rápidas para facilitar o planejamento da sua equipe de apoio.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion accordion-flush rounded-4 overflow-hidden border shadow-sm" id="faqAccordion">
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Quantos garçons preciso para o meu evento?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-secondary">
+                                    A quantidade varia conforme o cardápio (jantar servido à mesa, buffet volante ou churrasco). Para serviços volantes de salgados e bebidas, a proporção média recomendada é de 1 garçom para cada 15 a 20 pessoas. No WhatsApp calculamos o número ideal exato para sua festa.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    A equipe comparece uniformizada?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-secondary">
+                                    Sim, todos os profissionais chegam devidamente padronizados com uniforme social preto alinhado ou uniforme branco elegante, calçados adequados e postura condizente com a proposta do evento.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Com quanta antecedência devo fechar o contrato?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-secondary">
+                                    Para datas disputadas em fins de semana e períodos comemorativos de fim de ano, sugerimos reservar com 2 a 4 semanas de antecedência para garantir a disponibilidade de toda a equipe.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Vocês atendem em chácaras e cidades vizinhas?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-secondary">
+                                    Sim! Além da zona urbana de Santo Antônio de Jesus, atendemos eventos em sítios, chácaras e municípios vizinhos do Recôncavo, alinhando a taxa de deslocamento no momento da proposta.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chamada Final (CTA) -->
+    <section class="py-5 text-white text-center" style="background: linear-gradient(135deg, var(--cor-preto-profundo) 0%, var(--cor-grafite-escuro) 100%);">
+        <div class="container py-4">
+            <h2 class="fw-bold mb-3">Garanta a melhor equipe para o seu grande dia</h2>
+            <p class="lead text-white-50 mx-auto mb-4" style="max-width: 600px;">
+                Mande uma mensagem agora com a data, horário e local aproximado para receber uma estimativa rápida sem compromisso.
+            </p>
+            <a href="https://wa.me/5575982612616?text=Ol%C3%A1%2C%20Dona%20Zel%C3%A2ndia!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20meu%20evento." 
+               target="_blank" 
+               class="btn-whatsapp shadow-lg">
+                <i class="bi bi-whatsapp fs-5"></i> Falar com Dona Zelândia
+            </a>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="text-white-50 py-4 text-center border-top" style="background-color: var(--cor-preto-profundo); border-color: rgba(212, 175, 55, 0.2) !important;">
+        <div class="container">
+            <img src="assets/img/logo.png" alt="Zelândia Santos" style="height: 38px; filter: brightness(0) invert(1); opacity: 0.9;" class="mb-3">
+            <p class="mb-1 text-white fw-bold">Zelândia Pereira dos Santos — Coordenação de Eventos & Garçons</p>
+            <p class="small mb-0">Santo Antônio de Jesus - Bahia • WhatsApp: (75) 98261-2616</p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/5575982612616?text=Ol%C3%A1%2C%20Dona%20Zel%C3%A2ndia!%20Gostaria%20de%20saber%20mais%20sobre%20as%20equipes%20de%20gar%C3%A7ons." 
+       class="whatsapp-float" 
+       target="_blank" 
+       title="Falar no WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
